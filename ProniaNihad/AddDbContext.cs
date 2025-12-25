@@ -1,0 +1,14 @@
+﻿using Microsoft.EntityFrameworkCore;
+using ProniaWebNihad.Models;
+
+
+namespace ProniaWebNihad
+{
+    public class AddDbContext:DbContext
+    {
+        public AddDbContext(DbContextOptions<AddDbContext> options) : base(options)
+        {
+        }
+        public DbSet<Shipping> Shippings { get; set; }
+    }
+}
