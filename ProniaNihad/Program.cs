@@ -15,7 +15,6 @@ namespace ProniaWebNihad
             });
             var app = builder.Build();
             app.MapDefaultControllerRoute();
-            app.UseStaticFiles();
 
             app.Run();
         }
