@@ -8,6 +8,7 @@ namespace ProniaWebNihad
     {
         public AddDbContext(DbContextOptions<AddDbContext> options) : base(options)
         {
+
         }
         public DbSet<Shipping> Shippings { get; set; }
     }
