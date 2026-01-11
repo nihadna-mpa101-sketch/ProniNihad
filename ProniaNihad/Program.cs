@@ -11,7 +11,7 @@ namespace ProniaWebNihad
             builder.Services.AddControllersWithViews();
 
             
-            builder.Services.AddDbContext<AddDbContext>(options =>
+            builder.Services.AddDbContext<AppDbContext>(options =>
             {
                   options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
             });

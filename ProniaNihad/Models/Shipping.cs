@@ -1,11 +1,16 @@
-﻿namespace ProniaWebNihad.Models
+﻿using ProniaWebNihad.Models.Common;
+using System.ComponentModel.DataAnnotations;
+
+namespace ProniaWebNihad.Models
 {
-    public class Shipping
+    public class Shipping : BaseEntity
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string ImageUrl { get; set; }
+        [MaxLength(50)]
+        [MinLength(3)]
+        public string Name { get; set; } = null!;
+        public string? Description { get; set; }
+        [Required]
+        public string ImagePath {  get; set; } = null!;
 
     }
 }
